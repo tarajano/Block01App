@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonBlue, buttonPink;
 
@@ -16,6 +16,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         buttonPink = (Button) findViewById(R.id.button_pinkPanther);
         buttonBlue = (Button) findViewById(R.id.button_blueInvisible);
+        // Preparing to set onClick actions
+        buttonPink.setOnClickListener(this);
+        buttonBlue.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        toDO(v);
     }
 
     public void toDO(View v){
