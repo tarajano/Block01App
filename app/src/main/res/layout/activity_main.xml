@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.tarajano.block01app.MainActivity">
@@ -12,20 +13,22 @@
         android:layout_height="wrap_content"
         android:background="@color/azulCelesteBlock01"
         android:text="The Invisible Man's TODO list"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="2dp" />
 
     <Button
         android:id="@+id/button_pinkPanther"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
         android:background="@color/pinkPantherBlock01"
         android:text="The Pink Panther's TODO list"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_blueInvisible"
-        tools:layout_below="@id/button_blueInvisible" />
+        android:layout_below="@id/button_blueInvisible" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/myBbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="myBbutton"
+        android:layout_below="@id/button_pinkPanther" />
+
+</RelativeLayout>
